@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .span11
+    .hero-unit(style="text-align: justify; text-indent: 40px;")
+      h1(style="font-size: 45px; text-align: center; padding-bottom: 20px;")= chapter.title
+      - chapter.paragraphs.forEach(function(item){
+      p.htmlText #{item}
+      - })
+      p(style="text-indent: 0px; font-size: 30px;text-align: center;")
+        - if(chapter.chapterNum == 1) {
+        a.btn.btn-primary(href="/#{chapter.chapterNum + 1}") Следующая
+        - }
+        - else if(chapter.chapterNum == 229) {
+        a.btn.btn-primary(href="/#{chapter.chapterNum - 1}") Предыдущая
+        - }
+        - else {
+        a.btn.btn-primary(href="/#{chapter.chapterNum - 1}") Предыдущая
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        a.btn.btn-primary(href="/#{chapter.chapterNum + 1}") Следующая
+        - }

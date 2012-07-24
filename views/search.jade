@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .span11
+    .hero-unit(style="text-align: justify; text-indent: 40px;")
+      - for (var key in chapters) {
+      p(style="font-size: 24px; text-align: center;")
+        a(href="/#{chapters[key].chapterNum}") #{chapters[key].title}
+        p.htmlText(style="font-size: 14px; text-align: justufy;") #{chapters[key].paragraphs[paragNums[key]]}
+      hr
+      - }

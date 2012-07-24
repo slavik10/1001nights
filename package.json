@@ -1,0 +1,16 @@
+{
+  "name": "1001nights",
+  "subdomain": "1001nights",
+  "scripts": {
+    "start": "app.js"
+  },
+  "version": "0.0.0-1",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "express": "3.0.0beta7",
+    "jade": "*",
+    "mongoose": "2.7.2"
+  }
+}
